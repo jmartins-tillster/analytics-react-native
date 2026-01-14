@@ -1,10 +1,44 @@
 {
-  "extends": "../../tsconfig.json",
   "compilerOptions": {
-    "outDir": "lib/typescript",
     "rootDir": ".",
-    "baseUrl": "."
+    "baseUrl": ".",
+    "paths": {
+      "@segment/sovran-react-native": ["packages/sovran/src/index"],
+      "@segment/analytics-react-native": ["packages/core/src/index"]
+    },
+    "composite": true,
+    "allowUnreachableCode": false,
+    "allowUnusedLabels": false,
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "jsx": "react",
+    "lib": ["esnext"],
+    "module": "esnext",
+    "moduleResolution": "node",
+    "noFallthroughCasesInSwitch": true,
+    "noImplicitReturns": true,
+    "noImplicitUseStrict": false,
+    "noStrictGenericChecks": false,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "resolveJsonModule": true,
+    "skipLibCheck": true,
+    "noImplicitAny": true,
+    "strict": true,
+    "target": "esnext",
+    "outDir": "lib/typescript",
+    "types": ["jest", "node"]
   },
-  "references": [{ "path": "../sovran" }],
-  "include": ["src/**/*", "src/**/*.json", "types.d.ts"]
+  "include": ["types.d.ts", "packages/**/*"],
+  "exclude": [
+    "node_modules",
+    "lib",
+    "**/lib/**/*",
+    "**/*.test.ts",
+    "**/__mocks__/**/*",
+    "**/__tests__/**/*",
+    "**/__fixtures__/**/*",
+    "**/__snapshots__/**/*",
+    "**/__helpers__/**/*"
+  ]
 }
