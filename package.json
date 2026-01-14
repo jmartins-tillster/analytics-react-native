@@ -12,6 +12,18 @@
     "url": "https://github.com/jmartins-tillster/analytics-react-native.git",
     "directory": "packages/core"
   },
+  "files": [
+    "packages/core/src",
+    "packages/core/lib",
+    "packages/coreandroid",
+    "packages/core/ios",
+    "packages/core/segment-analytics-react-native.podspec",
+    "packages/core/package.json",
+    "!packages/core/src/**/*.e2e.mock.js",
+    "!packages/core/**/__tests__",
+    "!packages/core/**/__fixtures__",
+    "!packages/core/**/__mocks__"
+  ],
   "scripts": {
     "bootstrap": "yarn install && yarn example install && yarn example pods && yarn e2e install && yarn e2e pods && husky install",
     "bootstrap:ci": "yarn install && yarn e2e install && yarn e2e pods && husky install",
