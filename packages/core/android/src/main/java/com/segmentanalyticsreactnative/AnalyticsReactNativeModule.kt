@@ -218,8 +218,6 @@ class AnalyticsReactNativeModule : ReactContextBaseJavaModule, ActivityEventList
 
     Log.d(name, "Sending Deeplink data to store: uri=${uri}, referrer=${referrer}")
     val sovran = (reactApplicationContext.currentActivity?.application as ReactApplication)
-      ?.reactNativeHost
-      ?.reactInstanceManager
       ?.currentReactContext
       ?.getNativeModule(SovranModule::class.java)
     sovran?.dispatch("add-deepLink-data", properties)
