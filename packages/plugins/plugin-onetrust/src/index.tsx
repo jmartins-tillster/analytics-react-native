@@ -1,1 +1,0 @@
-export { OneTrustConsentProvider } from './OneTrustProvider';
